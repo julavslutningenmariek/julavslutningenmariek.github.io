@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta name="description" content="Information om Julavslutningen på Mariekällskolan 2026. Här hittar du information om konserten, tider, plats och aktiviteter.">
+<meta name="robots" content="index, follow">
+<title>Julavslutningen Mariekällskolan 2026</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+:root{--wine:#8f2633;--wine-dark:#681923;--green:#173f35;--cream:#fff9f1;--pink:#f8e3df;--gold:#c79a55;--snow:#ffffff}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:#25332e;font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+nav{position:sticky;top:0;z-index:5;background:#fffdf9ee;backdrop-filter:blur(8px);border-bottom:1px solid #0001}
+.nav{max-width:900px;margin:auto;display:flex;align-items:center;gap:12px;padding:9px 18px}
+.nav img{width:44px;height:44px;border-radius:50%}.brand{font-weight:800;color:var(--wine);margin-right:auto}
+.nav a{color:var(--green);text-decoration:none;font-size:14px;font-weight:700}
+.hero{text-align:center;padding:65px 20px 55px;background:linear-gradient(180deg,#f3d8d6 0%,#faebe5 55%,var(--cream) 100%);overflow:hidden}
+.logo{width:125px;height:125px;border-radius:50%;box-shadow:0 8px 25px #0002}
+h1{font-size:clamp(43px,9vw,76px);color:var(--wine);margin:18px 0 5px;letter-spacing:-2px}
+.hero p{font-size:20px;margin:0}
+main{max-width:850px;margin:auto;padding:30px 18px 55px}
+.card{background:#fffefd;border:1px solid #8f263310;border-radius:20px;padding:27px;margin:18px 0;box-shadow:0 7px 25px #4820170c;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+h2{color:var(--wine);margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.info{background:#faf0ed;border-radius:15px;padding:18px;text-align:center}
+.info b{display:block;color:var(--wine);margin-bottom:7px}
+.price{text-align:center;background:var(--pink);border-radius:17px;padding:20px;margin:16px 0}
+.price span{display:block;font-size:54px;font-weight:900;color:var(--wine);line-height:1}
+.tag{display:inline-block;background:var(--green);color:white;border-radius:99px;padding:6px 11px;margin:4px;font-size:14px}
+.update{border-left:4px solid var(--gold);padding-left:15px}
+footer{text-align:center;background:var(--green);color:white;padding:30px 15px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.nav a{display:none}}
+
+/* Juligare färger + interaktioner */
+.nav a{
+  position:relative;
+  padding:8px 4px;
+  transition:color .2s ease,transform .2s ease;
+}
+.nav a::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  right:50%;
+  bottom:3px;
+  height:2px;
+  border-radius:99px;
+  background:var(--wine);
+  transition:left .2s ease,right .2s ease;
+}
+.nav a:hover,.nav a:focus-visible{color:var(--wine);transform:translateY(-1px)}
+.nav a:hover::after,.nav a:focus-visible::after{left:0;right:0}
+
+.logo{transition:transform .28s ease,box-shadow .28s ease}
+.logo:hover{transform:rotate(-3deg) scale(1.045);box-shadow:0 12px 30px #7f222833}
+
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px #48201716;
+  border-color:#8f263326;
+}
+
+.tag{
+  transition:transform .18s ease,filter .18s ease;
+  cursor:default;
+}
+.tag:hover{transform:translateY(-2px) scale(1.035);filter:brightness(1.08)}
+
+.price{
+  border:1px solid #8f263315;
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.price:hover{transform:scale(1.012);box-shadow:0 8px 20px #7f222812}
+
+.hero h1,.hero p,.hero .logo,.hero .ej-mark-hero{
+  animation:heroIn .75s ease both;
+}
+.hero h1{animation-delay:.10s}
+.hero p{animation-delay:.20s}
+@keyframes heroIn{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Fallande snö */
+#snow-container{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:9999;
+}
+.snowflake{
+  position:absolute;
+  top:-30px;
+  color:var(--snow);
+  text-shadow:0 1px 4px #173f3530;
+  user-select:none;
+  animation:snowfall linear infinite;
+}
+@keyframes snowfall{
+  0%{transform:translate3d(0,-30px,0) rotate(0deg)}
+  50%{transform:translate3d(16px,55vh,0) rotate(180deg)}
+  100%{transform:translate3d(-12px,110vh,0) rotate(360deg)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .snowflake{display:none}
+}
+
+
+/* EJ lettermark – replaces the old image logo */
+.ej-mark{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  border-radius:50%;
+  background:linear-gradient(145deg,var(--wine),var(--wine-dark));
+  color:#fffaf2;
+  border:2px solid rgba(199,154,85,.8);
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:800;
+  letter-spacing:-.08em;
+  line-height:1;
+  box-shadow:0 7px 20px #68192324;
+  user-select:none;
+}
+.ej-mark-nav{
+  width:44px;
+  height:44px;
+  font-size:19px;
+}
+.ej-mark-hero{
+  width:125px;
+  height:125px;
+  margin-inline:auto;
+  font-size:48px;
+  border-width:3px;
+  box-shadow:0 10px 28px #6819232b;
+  transition:transform .28s ease,box-shadow .28s ease;
+}
+.ej-mark-hero:hover{
+  transform:rotate(-3deg) scale(1.045);
+  box-shadow:0 14px 34px #68192338;
+}
+
+
+/* Julmusik-knapp */
+#music-control{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:10000;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  min-height:46px;
+  padding:10px 15px;
+  border:1px solid rgba(199,154,85,.75);
+  border-radius:999px;
+  background:rgba(104,25,35,.94);
+  color:#fffaf2;
+  font:700 14px Arial,Helvetica,sans-serif;
+  box-shadow:0 8px 24px #3010152b;
+  backdrop-filter:blur(8px);
+  cursor:pointer;
+  transition:transform .18s ease,background .18s ease,box-shadow .18s ease;
+}
+#music-control:hover{
+  transform:translateY(-2px) scale(1.02);
+  background:rgba(143,38,51,.97);
+  box-shadow:0 11px 28px #30101538;
+}
+#music-control:active{transform:scale(.96)}
+#music-control:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+#music-control .music-icon{font-size:18px}
+@media(max-width:650px){
+  #music-control{right:12px;bottom:12px;padding:9px 13px}
+}
+
+</style>
+</head>
+<body>
+<div id="snow-container" aria-hidden="true"></div>
+<nav><div class="nav">
+<span class="ej-mark ej-mark-nav" aria-label="EJ">EJ</span><span class="brand">Julavslutning 2026</span>
+<a href="#info">Info</a><a href="#kvallen">Kvällen</a><a href="#intrade">Inträde</a><a href="#uppdateringar">Uppdateringar</a>
+</div></nav>
+
+<header class="hero">
+<div class="ej-mark ej-mark-hero" aria-label="EJ">EJ</div>
+<h1>JULAVSLUTNING</h1>
+<p>Vi avslutar terminen tillsammans! 🎄</p>
+</header>
+
+<main>
+<section class="card" id="info">
+<h2>📌 Information</h2>
+<div class="grid">
+<div class="info"><b>📅 Datum</b>Det är<br>tyvärr inte planerat ännu</div>
+<div class="info"><b>🕒 Tid</b>Inte planerat ännu</div>
+<div class="info"><b>📍 Plats</b>Stockholm<br><small>Exakt plats är inte planerad ännu</small></div>
+</div>
+</section>
+
+<section class="card" id="kvallen">
+<h2>🎄 Om julavslutningen</h2>
+<p>Vi träffas för att avsluta terminen tillsammans och ha en mysig julkväll. Mer information om programmet kommer när planeringen är klar.</p>
+<div><span class="tag">🎵 Musik</span><span class="tag">☕ Fika</span><span class="tag">🎄 Julstämning</span><span class="tag">✨ Överraskningar</span></div>
+</section>
+
+<section class="card" id="intrade">
+<h2>🎟️ Inträde</h2>
+<div class="price">INTRÄDE<span>2 KR</span>per person</div>
+<p><b>Betalning:</b> Helst kontant, annars kan du swisha någon utav oss i personal.</p>
+</section>
+
+<section class="card" id="uppdateringar">
+<h2>📣 Uppdateringar</h2>
+<div class="update"><b>Senast:</b> Datumet är satt till ???. Exakt tid och plats i Stockholm är ännu inte planerade.</div>
+<p>Den här sidan uppdateras när vi vet mer, så kika gärna in igen senare.</p>
+</section>
+
+<section class="card">
+<h2>❓ Frågor?</h2>
+<p>Prata med någon av oss i personalen om du undrar över julavslutningen, betalningen eller något annat.</p>
+</section>
+</main>
+<footer><b>God jul & gott nytt år! ❤️</b><br><small>Julavslutning 2026</small></footer>
+
+<script>
+(() => {
+  const snowContainer = document.getElementById("snow-container");
+  if (snowContainer && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (let i = 0; i < 48; i++) {
+      const flake = document.createElement("span");
+      flake.className = "snowflake";
+      flake.textContent = "❄";
+      flake.style.left = Math.random() * 100 + "%";
+      flake.style.fontSize = (Math.random() * 11 + 7) + "px";
+      flake.style.animationDuration = (Math.random() * 7 + 7) + "s";
+      flake.style.animationDelay = (Math.random() * -14) + "s";
+      flake.style.opacity = (Math.random() * .48 + .28).toFixed(2);
+      snowContainer.appendChild(flake);
+    }
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", () => {
+      link.animate(
+        [{transform:"scale(1)"},{transform:"scale(.93)"},{transform:"scale(1)"}],
+        {duration:220,easing:"ease-out"}
+      );
+    });
+  });
+})();
+</script>
+
+
+<!-- Julmusik: lägg filen julmusik.mp3 i samma GitHub-mapp som index.html -->
+<audio id="christmas-music" loop preload="metadata">
+  <source src="julmusik.mp3" type="audio/mpeg">
+</audio>
+<button id="music-control" type="button" aria-pressed="false" aria-label="Starta julmusik">
+  <span class="music-icon" aria-hidden="true">🔇</span>
+  <span class="music-label">Julmusik</span>
+</button>
+
+
+<script>
+(() => {
+  const music = document.getElementById("christmas-music");
+  const button = document.getElementById("music-control");
+  if (!music || !button) return;
+
+  const icon = button.querySelector(".music-icon");
+  const label = button.querySelector(".music-label");
+  music.volume = 0.12;
+
+  function setState(playing) {
+    button.setAttribute("aria-pressed", String(playing));
+    button.setAttribute("aria-label", playing ? "Pausa julmusik" : "Starta julmusik");
+    icon.textContent = playing ? "🔊" : "🔇";
+    label.textContent = playing ? "Musik på" : "Julmusik";
+  }
+
+  button.addEventListener("click", async () => {
+    if (music.paused) {
+      try {
+        await music.play();
+        setState(true);
+      } catch (err) {
+        setState(false);
+        label.textContent = "Lägg till julmusik.mp3";
+      }
+    } else {
+      music.pause();
+      setState(false);
+    }
+  });
+
+  music.addEventListener("ended", () => setState(false));
+  music.addEventListener("error", () => {
+    setState(false);
+    label.textContent = "Ingen musikfil";
+  });
+})();
+</script>
+
+</body>
+</html>
